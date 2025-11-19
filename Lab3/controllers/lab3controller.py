@@ -95,4 +95,7 @@ class Lab3Controller:
             image = self.boundary_model.boundary_fill(image, x, y)
         elif self.fill_method == "Flood":
             image = self.flood_model.fill(image, x, y)
+
+        # Sauvegarder l'image modifiée pour conserver les modifications
+        self.shape_model.image = image
         self.ui.update_canvas(image)
