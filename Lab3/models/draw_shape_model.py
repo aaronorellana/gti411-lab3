@@ -21,11 +21,15 @@ class DrawShapeModel:
         self.fill_color = np.array([255, 255, 0])
         self.boundary_color = np.array([255, 0, 0])
 
+        # Pour la prévisualisation
+        self.temp_image = None
+
 
     def reset_image(self, h=490, w=1250):
         self.image = np.ones((h, w, 3)) * np.array([255, 255, 255])
         self.image = self.image.astype(np.uint8)
-        
+        self.temp_image = None
+
     
     def update_shape_type(self, shape_type:str):
         print(f"New shape type {shape_type}")
@@ -116,7 +120,7 @@ class DrawShapeModel:
                 if 0 <= y < self.image.shape[0] and 0 <= x < self.image.shape[1]:
                     self.image[y, x] = self.color
 
-        elif self.shape_type == "Ellipse":
+        elif self.shape_type == "Ellispis":
             # Ellipse : centre=p1, semi-grand axe jusqu'à p2
             center = (x0, y0)
             # Semi-grand axe = distance entre p1 et p2
