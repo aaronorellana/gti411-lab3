@@ -1,8 +1,6 @@
 import numpy as np
 import cv2
 
-import sys
-sys.setrecursionlimit(100000)
 
 
 def is_close(vec1, vec2):
