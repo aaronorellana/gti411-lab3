@@ -16,7 +16,7 @@ class BackgroundRemover:
 
         # Essayer de charger une image de remplacement
         try:
-            self.replacement_image = cv2.imread("images/background.jpg")
+            self.replacement_image = cv2.imread("images/stm.jpg")
             if self.replacement_image is not None:
                 self.replacement_image = cv2.cvtColor(self.replacement_image, cv2.COLOR_BGR2RGB)
         except:
